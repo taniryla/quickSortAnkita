@@ -24,6 +24,13 @@ function mergeSort(arr) {
         j++;
       }
     }
+    while (i < left.length) {
+      newArr.push(left[i]);
+      i++;
+    }
+    while (j < right.length) {
+      newArr.push(right[j]);
+    }
     arr = newArr;
     console.log(newArr);
   }
