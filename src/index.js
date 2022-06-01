@@ -3,7 +3,7 @@ function mergeSort(arr) {
   // logic of splitting into layers with base case
   if (arr.length > 1) {
     // by dividing arr.length by 2 find the midpoint
-    let midpoint = Math.floor(arr[arr.length / 2]);
+    let midpoint = Math.floor(arr.length / 2);
     let left = arr.slice(0, midpoint);
     let right = arr.slice(midpoint, arr.length);
     mergeSort(left);
@@ -24,5 +24,9 @@ function mergeSort(arr) {
         j++;
       }
     }
+    arr = newArr;
+    console.log(newArr);
   }
 }
+
+console.log(mergeSort([3, 2, 5, 3, 1]));
