@@ -15,12 +15,14 @@ function mergeSort(arr) {
     let i = 0;
     // [3, 4] second array (right side)
     let j = 0;
-    if (left[i] < right[j]) {
-      newArr.push(left[i]);
-      i++;
-    } else {
-      newArr.push(right[j]);
-      j++;
+    while (i < left.length || j < right.length) {
+      if (left[i] < right[j]) {
+        newArr.push(left[i]);
+        i++;
+      } else {
+        newArr.push(right[j]);
+        j++;
+      }
     }
   }
 }
